@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+   
     <title>JOVIAN careers</title>
    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,12 +46,22 @@
     </style>
 </head>
 <body>
+  {% include 'nav.html'%}
     <div id= 'container'>
     <h1>JOVIAN career</h1>
-    <img id='banner' src="https://49287fcf-312b-4f60-9068-83d483b81a14-00-ujeot189tk70.pike.replit.dev:5000/static/banner.jpg"
-     height = '320'   > 
+<img id='banner' src="https://49287fcf-312b-4f60-9068-83d483b81a14-00-ujeot189tk70.pike.replit.dev:5000/static/banner.jpg"
+     style=' height: 300px ;' > 
     <h2>About jovian</h2>
-    <p>This is an example paragraph.</p>
+    <div class='row'style= 'margin-bottom:16px;'>
+      <div class='col-md-6'>
+      <p>This is an example paragraph.</p>
+        </div>
+           <div class= 'd-none d-md-block col-md-6'>  
+             <img src= 'static/peopleworking.jpg'
+                 style=' height: 200px ; width: 340px;border-radius :4px;' >
+ 
+             </div>
+    </div>
     <h2>Open Positions</h2>
       
       <div> 
@@ -59,11 +69,20 @@
          {% include 'jobitem.html'%}
         {% endfor %}
 
+ 
       
+      </div> 
       </div>
-   <div style='text-align:center'>
+   
+       {% include 'footer.html'%}
+ <div style='text-align:center'>
   
        <p>Copyright 2023.Jovian       </p>
-      </div>   
+      </div> 
+      
+
+
+
+        
 </body>
 </html>
